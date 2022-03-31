@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+
+/* 
+GENERAL
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url(../imagenes/gucci1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    backdrop-filter: blur(5px);
+}
+
+header {
+    padding-top: 1cm;
+    padding-bottom: 1cm;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 72px;
+    color: #fff;
+}
+
+nav ul {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.li {
+    display: inline-block;
+    padding: 1cm;
+    border-left: 0.1cm solid #D9D0D0;
+}
+
+.index{
+    display: inline-block;
+    padding: 1cm;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18   px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: #000 1px 0 5px;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    background-color: #fff;
+    padding-bottom: 1cm;
+    padding-top: 1cm;
+}
+
+footer li {
+    text-align: center;
+    display: inline-block;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+footer li a {
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* 
+index
+*/
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: calc(80vh - 50px);
+    background-size: cover;
+    background-position: center;
+    transition: all .1s ease-in-out;
+    background-image: url(../imagenes/1.jpg);
+    margin-top: 1cm;
+
+    animation: banner 18s infinite linear;
+    animation-direction: alternate;
+}
+
+.coleccion {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner div a {
+    text-decoration: none;
+    -webkit-text-stroke: 2px #000;
+    color: transparent;
+    font-size: 60px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.banner div p {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    padding-top: 0.2cm;
+}
+
+@keyframes banner {
+    0%{
+        background-image: url('../imagenes/1.jpg')
+    }
+
+    32%{
+        background-image: url('../imagenes/1.jpg')
+    }
+
+    36%{
+        background-image: url('../imagenes/2.jpg')
+    }
+
+    62%{
+        background-image: url('../imagenes/2.jpg')
+    }
+
+    66%{
+        background-image: url('../imagenes/3.jpg')
+    }
+
+    100%{
+        background-image: url('../imagenes/3.jpg')
+    }
+}
+
+/* 
+pagina de hombre
+*/
+
+.img1 {
+    background-image: url(../imagenes/hombre/hombre1.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: 500px;
+}
+
+/* 
+pagina de mujer
+*/
+
+.spring {
+    background-image: url(../imagenes/main\ hombre\ y\ mujer.gif);
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    padding-top: 2cm;
+    padding-bottom: 2cm;
+    background-repeat: repeat-x;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spring h3 {
+    position: absolute;
+    -webkit-text-stroke: 1px #F5B7B1;
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.hombremujer {
+    margin-bottom: 1cm;
+    display: flex;
+    justify-content: center;
+}
+
+.img {
+    background-image: url(../imagenes/mujer/mujer1.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: 500px;
+}
+
+.text {
+    width: 50%;
+    text-align: center;
+    padding: 0px 70px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hombremujer h3 {
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+.hombremujer p {
+    color: #F5B7B1;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hombremujer1 {
+    background-image: url(../imagenes/main\ hombre\ y\ mujer.gif);
+    margin-bottom: 1cm;
+    padding-top: 2cm;
+    padding-bottom: 2cm;
+    background-repeat: repeat-x;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.galeria {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1cm;
+}
+
+.galeria img {
+    padding: 5px;
+    width: 300px;
+    height: 300px;
+}
+
+/* 
+pagina de ss22
+*/
+
+.ss {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+iframe {
+    padding-top: 1.5cm;
+    padding-bottom: 1.5cm;
+    width: 1000px;
+    height: 800px;
+}
+
+.h2 {
+    text-align: center;
+    padding-bottom: 1.5cm;
+    -webkit-text-stroke: 0.5px #fff;
+    color: transparent;
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.div1 {
+    padding-bottom: 1.5cm;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.div2 {
+    width: 300px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.foto img {
+    width: 300px;
+    height: auto;
+}
+
+.texto1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+}
+
+
+/* 
+pagina de contacto
+*/
+
+form {
+    width: 500px;
+    background: #999;
+    margin: auto;
+    margin-top: 2cm;
+    margin-bottom: 2cm;
+    box-shadow: 1px 10px 40px #999;
+    padding: 65px 45px;
+    border-radius: 5px;
+}
+
+form h2 {
+    margin: 0;
+    padding-bottom: 40px;
+    text-align: center;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #543206;
+    filter: contrast(0.5);
+}
+
+.texto {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 5px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #543206;
+    outline: none;
+}
+
+::placeholder {
+    color: #000;
+}
+
+.sexo {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+}
+
+.enviar {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fff;
+    border: none;
+    background-color: #666;
+}
+
