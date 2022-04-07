@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
 
+
 /* 
 GENERAL
 */
@@ -8,10 +9,6 @@ GENERAL
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-
-html {
-    height: 100%;
 }
 
 body {
@@ -26,65 +23,62 @@ body {
     backdrop-filter: blur(5px);
 }
 
-header {
-    padding-top: 1cm;
-    padding-bottom: 1cm;
-}
-
-h1 {
-    text-align: center;
-    font-family: 'Roboto Slab', serif;
-    font-size: 72px;
-    color: #fff;
-}
-
-nav ul {
-    text-align: center;
-}
-
-ul {
-    list-style: none;
-}
-
-.li {
-    display: inline-block;
-    padding: 1cm;
-    border-left: 0.1cm solid #D9D0D0;
-}
-
-.index{
-    display: inline-block;
-    padding: 1cm;
-}
-
-nav li a {
+a {
     text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin: 60px;
+}
+
+header .h1 a {
+    font-family: 'Roboto Slab', serif;
+    font-size: 60px;
     color: #fff;
-    font-size: 18   px;
+}
+
+header li a {
+    color: #fff;
+    font-size: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-shadow: #000 1px 0 5px;
 }
 
+.menu {
+    width: 30px;
+    height: 30px;
+}
+
+.checkbtn{
+    font-size: 120px;
+    color: #fff;
+    float: right;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
 footer {
+    display: flex;
+    flex-direction: column;
     margin-top: auto;
     text-align: center;
     background-color: #fff;
-    padding-bottom: 1cm;
-    padding-top: 1cm;
+    padding: 30px 0;
 }
 
 footer li {
-    text-align: center;
-    display: inline-block;
-    padding-left: 100px;
-    padding-right: 100px;
+    display: flex;
+    justify-content: center;
 }
 
 footer li a {
-    list-style: none;
-    text-decoration: none;
     color: #000;
-    font-size: 16px;
+    font-size: 1em;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -100,7 +94,7 @@ index
     background-position: center;
     transition: all .1s ease-in-out;
     background-image: url(../imagenes/1.jpg);
-    margin-top: 1cm;
+    z-index: -1;
 
     animation: banner 18s infinite linear;
     animation-direction: alternate;
@@ -160,24 +154,18 @@ index
 }
 
 /* 
-pagina de hombre
+pagina de hombre y mujer
 */
 
 .img1 {
     background-image: url(../imagenes/hombre/hombre1.jpg);
     background-size: cover;
-    background-position: center;
     width: 400px;
     height: 500px;
 }
 
-/* 
-pagina de mujer
-*/
-
 .spring {
     background-image: url(../imagenes/main\ hombre\ y\ mujer.gif);
-    margin-top: 1cm;
     margin-bottom: 1cm;
     padding-top: 2cm;
     padding-bottom: 2cm;
@@ -195,12 +183,6 @@ pagina de mujer
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.hombremujer {
-    margin-bottom: 1cm;
-    display: flex;
-    justify-content: center;
-}
-
 .img {
     background-image: url(../imagenes/mujer/mujer1.jpg);
     background-size: cover;
@@ -209,18 +191,8 @@ pagina de mujer
     height: 500px;
 }
 
-.text {
-    width: 50%;
-    text-align: center;
-    padding: 0px 70px;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .hombremujer h3 {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     font-size: 22px;
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
@@ -234,7 +206,7 @@ pagina de mujer
 
 .hombremujer1 {
     background-image: url(../imagenes/main\ hombre\ y\ mujer.gif);
-    margin-bottom: 1cm;
+    margin: 40px 0px;
     padding-top: 2cm;
     padding-bottom: 2cm;
     background-repeat: repeat-x;
@@ -246,17 +218,19 @@ pagina de mujer
 
 .galeria {
     display: grid;
-    grid-template-rows: auto auto auto auto auto;
-
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 1cm;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 300px;
+    grid-gap: 10px;
 }
 
-.galeria img {
-    padding: 5px;
-    width: 300px;
-    height: 300px;
+.fotos:hover {
+    transform: scale(1.1);
+}
+
+.imagen__galeria {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* 
@@ -270,15 +244,13 @@ pagina de ss22
 }
 
 iframe {
-    padding-top: 1.5cm;
-    padding-bottom: 1.5cm;
     width: 1000px;
     height: 800px;
 }
 
 .h2 {
+    padding: 60px 0px;
     text-align: center;
-    padding-bottom: 1.5cm;
     -webkit-text-stroke: 0.5px #fff;
     color: transparent;
     font-size: 40px;
@@ -286,7 +258,7 @@ iframe {
 }
 
 .div1 {
-    padding-bottom: 1.5cm;
+    padding-bottom: 40px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -305,7 +277,7 @@ iframe {
 
 .texto1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 17px;
+    font-size: 1em;
     text-align: center;
     margin-top: 30px;
     color: #fff;
@@ -317,13 +289,16 @@ pagina de contacto
 */
 
 form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+form div {
     width: 500px;
     background: #999;
-    margin: auto;
-    margin-top: 2cm;
-    margin-bottom: 2cm;
     box-shadow: 1px 10px 40px #999;
-    padding: 65px 45px;
+    padding: 35px 45px;
     border-radius: 5px;
 }
 
@@ -369,3 +344,244 @@ form h2 {
     background-color: #666;
 }
 
+/* -- MOBILE -- */
+@media (max-width: 576px) {
+
+    form {
+        margin: 0px auto;
+        margin-bottom: 60px;
+        width: 350px;
+        height: auto;
+    }
+
+    .text {
+        width: 100%;
+        text-align: center;
+        padding: 0px 70px;
+    }
+
+    .galeria {
+        display: grid;
+        grid-template-columns: repeat(2, 4fr);
+        grid-auto-rows: 250px;
+        grid-gap: 10px;
+        padding: 30px;
+    }
+
+    .hombremujer .img1 {
+        display: none;
+    }
+
+    .hombremujer .img {
+        display: none;
+    }
+
+    .spring h3 {
+        font-size: 40px;
+    }
+
+    .hombremujer p {
+        font-size: 10px;
+    }
+
+    .coleccion {
+        text-align: center;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    .menu {
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 60px;
+    }
+
+    .nav__menu ul {
+        display: block;
+        position: absolute;
+        top: 190px;
+        left: -100%;
+        background: #000;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .nav__menu ul li {
+        padding: 20px 10px;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+    iframe {
+        width: 500px;
+        height: 300px;
+    }
+
+    .h2 {
+        padding: 30px 0;
+    }
+
+    .div1 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .div2 {
+        text-align: center;
+        width: 300px;
+        padding: 15px 0;
+    }
+
+    .foto img {
+        width: 250px;
+        height: auto;
+    }
+}
+
+/* -- TABLET -- */
+@media (min-width: 576px) and (max-width: 991px) {
+
+    iframe {
+        width: 700px;
+        height: 500px;
+    }
+
+    .h2 {
+        padding: 30px 0;
+    }
+
+    .div1 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .div2 {
+        width: 300px;
+        padding: 15px 0;
+    }
+
+    .galeria {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 250px;
+        grid-gap: 10px;
+        padding: 30px;
+    }
+
+    .img {
+        width: 400px;
+        height: 400px;
+        margin-left: 40px;
+    }
+    
+    .img1 {
+        width: 400px;
+        height: 400px;
+        margin-right: 40px;
+    }
+
+    .hombremujer {
+        display: flex;
+        align-items: center;
+    }
+
+    .text {
+        width: 100%;
+        padding: 0px 100px;
+        text-align: center;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    .menu {
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 90px;
+    }
+
+    .nav__menu ul {
+        display: block;
+        position: absolute;
+        padding: 30px;
+        top: 190px;
+        left: -100%;
+        background: #000;
+        width: 100%;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    .nav__menu ul li {
+        padding: 20px 10px;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+/* -- ESCRITORIO -- */
+@media (min-width: 992px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 60px 100px;
+    }
+
+    .li {
+        display: inline-block;
+        padding: 1cm;
+        border-left: 0.1cm solid #D9D0D0;
+    }
+    
+    .index{
+        display: inline-block;
+        padding: 1cm;
+    }
+    
+    nav li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-shadow: #000 1px 0 5px;
+    }
+
+    .hombremujer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text {
+        width: 40%;
+        margin-left: 0;
+        padding: 0px 250px;
+        text-align: center;
+    }
+
+    .galeria {
+        margin-bottom: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
