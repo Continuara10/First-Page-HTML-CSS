@@ -11,6 +11,10 @@ GENERAL
     box-sizing: border-box;
 }
 
+.navbar {
+    width: 100%;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -27,39 +31,17 @@ a {
     text-decoration: none;
 }
 
-header {
-    display: flex;
-    justify-content: center;
-    margin: 60px;
-}
-
-header .h1 a {
+.navbar-brand {
     font-family: 'Roboto Slab', serif;
     font-size: 60px;
     color: #fff;
 }
 
-header li a {
+.collapse li a {
     color: #fff;
     font-size: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-shadow: #000 1px 0 5px;
-}
-
-.menu {
-    width: 30px;
-    height: 30px;
-}
-
-.checkbtn{
-    font-size: 120px;
-    color: #fff;
-    float: right;
-    cursor: pointer;
-    display: none;
-}
-#check{
-    display: none;
 }
 
 footer {
@@ -86,33 +68,7 @@ footer li a {
 index
 */
 
-.banner {
-    position: relative;
-    width: 100%;
-    height: calc(80vh - 50px);
-    background-size: cover;
-    background-position: center;
-    transition: all .1s ease-in-out;
-    background-image: url(../imagenes/1.jpg);
-    z-index: -1;
-
-    animation: banner 18s infinite linear;
-    animation-direction: alternate;
-}
-
-.coleccion {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    color: #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.banner div a {
+.carousel-caption a {
     text-decoration: none;
     -webkit-text-stroke: 2px #000;
     color: transparent;
@@ -120,37 +76,13 @@ index
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.banner div p {
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
+.carousel-caption p {
     color: #000;
-    padding-top: 0.2cm;
 }
 
-@keyframes banner {
-    0%{
-        background-image: url('../imagenes/1.jpg')
-    }
-
-    32%{
-        background-image: url('../imagenes/1.jpg')
-    }
-
-    36%{
-        background-image: url('../imagenes/2.jpg')
-    }
-
-    62%{
-        background-image: url('../imagenes/2.jpg')
-    }
-
-    66%{
-        background-image: url('../imagenes/3.jpg')
-    }
-
-    100%{
-        background-image: url('../imagenes/3.jpg')
-    }
+.slide img{
+    height: 800px;
+    object-fit: cover;
 }
 
 /* 
@@ -289,66 +221,23 @@ pagina de contacto
 */
 
 form {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    margin: auto 600px;
 }
 
-form div {
-    width: 500px;
-    background: #999;
-    box-shadow: 1px 10px 40px #999;
-    padding: 35px 45px;
-    border-radius: 5px;
-}
-
-form h2 {
-    margin: 0;
-    padding-bottom: 40px;
-    text-align: center;
-    font-size: 30px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: #543206;
-    filter: contrast(0.5);
-}
-
-.texto {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 30px;
-    font-size: 15px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    border-radius: 5px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #543206;
-    outline: none;
-}
-
-::placeholder {
-    color: #000;
-}
-
-.sexo {
-    margin-top: 10px;
-    margin-bottom: 40px;
-    margin-right: 40px;
-}
-
-.enviar {
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #fff;
-    border: none;
-    background-color: #666;
+form div label {
+    color: #fff;
 }
 
 /* -- MOBILE -- */
 @media (max-width: 576px) {
 
+    .navbar a {
+        display: flex;
+        justify-content: center;
+    }
+
     form {
-        margin: 0px auto;
+        margin: 50px auto;
         margin-bottom: 60px;
         width: 350px;
         height: auto;
@@ -384,42 +273,6 @@ form h2 {
         font-size: 10px;
     }
 
-    .coleccion {
-        text-align: center;
-    }
-
-    .checkbtn {
-        display: block;
-    }
-
-    .menu {
-        display: block;
-        position: fixed;
-        top: 10px;
-        right: 60px;
-    }
-
-    .nav__menu ul {
-        display: block;
-        position: absolute;
-        top: 190px;
-        left: -100%;
-        background: #000;
-        width: 100%;
-        z-index: 999;
-    }
-
-    .nav__menu ul li {
-        padding: 20px 10px;
-        display: flex;
-        justify-content: center;
-        margin: 0;
-    }
-
-    #check:checked ~ ul {
-        left: 0;
-    }
-
     iframe {
         width: 500px;
         height: 300px;
@@ -449,6 +302,13 @@ form h2 {
 
 /* -- TABLET -- */
 @media (min-width: 576px) and (max-width: 991px) {
+
+    form {
+        margin: 50px auto;
+        margin-bottom: 60px;
+        width: 350px;
+        height: auto;
+    }
 
     iframe {
         width: 700px;
@@ -500,51 +360,10 @@ form h2 {
         padding: 0px 100px;
         text-align: center;
     }
-
-    .checkbtn {
-        display: block;
-    }
-
-    .menu {
-        display: block;
-        position: fixed;
-        top: 10px;
-        right: 90px;
-    }
-
-    .nav__menu ul {
-        display: block;
-        position: absolute;
-        padding: 30px;
-        top: 190px;
-        left: -100%;
-        background: #000;
-        width: 100%;
-        cursor: pointer;
-        z-index: 999;
-    }
-
-    .nav__menu ul li {
-        padding: 20px 10px;
-        display: flex;
-        justify-content: center;
-        margin: 0;
-    }
-
-    #check:checked ~ ul {
-        left: 0;
-    }
 }
 
 /* -- ESCRITORIO -- */
 @media (min-width: 992px) {
-
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 60px 100px;
-    }
 
     .li {
         display: inline-block;
@@ -555,14 +374,6 @@ form h2 {
     .index{
         display: inline-block;
         padding: 1cm;
-    }
-    
-    nav li a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 18px;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        text-shadow: #000 1px 0 5px;
     }
 
     .hombremujer {
