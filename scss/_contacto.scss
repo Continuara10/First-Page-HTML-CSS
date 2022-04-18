@@ -1,0 +1,25 @@
+form {
+  margin: auto 600px;
+  div label {
+    color: #fff;
+  }
+}
+
+@media (max-width: 576px) {
+  form {
+    margin: 50px auto;
+    margin-bottom: 60px;
+    width: 400px;
+    height: auto;
+  }
+}
+@media (min-width: 576px) and (max-width: 991px) {
+  form {
+    margin: 50px auto;
+    margin-bottom: 60px;
+    width: 650px;
+    height: auto;
+  }
+}
+@media (min-width: 992px) {
+}
