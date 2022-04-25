@@ -1,11 +1,11 @@
-.h3_hombre {
+.h2_hombre {
   width: 100%;
   background-color: #fff;
   padding: 40px 0px;
   text-align: center;
   -webkit-text-stroke: 2px #000;
   color: transparent;
-  font-size: 60px;
+  font-size: map-get($titulos, letras);
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
@@ -30,12 +30,12 @@
     opacity: 0;
     transition: 0.5s;
     a {
-      font-size: 30px;
+      font-size: map-get($titulos, a);
       color: #fff;
       text-shadow: #000 6px 0 7px;
     }
     p {
-      font-size: 15px;
+      font-size: map-get($titulos, p);
       color: #fff;
       text-shadow: #000 6px 0 7px;
     }
@@ -48,8 +48,12 @@
 @media (max-width: 576px) {
   .tarjeta_hombre {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 20px 0px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
+    justify-content: center;
+    .galeria {
+      width: 450px;
+    }
   }
 }
 @media (min-width: 576px) and (max-width: 991px) {

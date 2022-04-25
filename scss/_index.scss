@@ -38,7 +38,7 @@ header {
   }
   .navbar-brand {
     font-family: "Roboto Slab", serif;
-    font-size: 4em;
+    font-size: map-get($titulos, letras);
     color: #fff;
   }
 }
@@ -56,7 +56,7 @@ footer {
   }
   li a {
     color: #000;
-    font-size: 1em;
+    font-size: map-get($titulos, p);
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   }
 }
@@ -65,12 +65,12 @@ footer {
   .carousel-caption a {
     -webkit-text-stroke: 2px #4e4a49;
     color: transparent;
-    font-size: 2em;
+    font-size: map-get($titulos, a);
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   }
   .carousel-caption p {
     color: #4e4a49;
-    font-size: 1em;
+    font-size: map-get($titulos, p);
   }
   img {
     height: 800px;
