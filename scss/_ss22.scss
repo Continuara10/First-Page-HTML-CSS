@@ -2,31 +2,33 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 60px;
+  margin: 60px 0;
   iframe {
     width: 1000px;
     height: 800px;
   }
 }
 
-.h2 {
-  margin: 60px 0px;
+.h2_ss {
+  width: 100%;
+  background-color: #fff;
+  padding: 40px 0px;
   text-align: center;
-  -webkit-text-stroke: 0.5px #fff;
+  -webkit-text-stroke: 2px #000;
   color: transparent;
-  font-size: 2.8em;
+  font-size: 2em;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .tarjeta_ss {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-bottom: 60px;
+  margin-bottom: 10px;
   justify-items: center;
   align-items: center;
   .galeria {
-    width: 500px;
-    height: 600px;
+    width: 400px;
+    height: 650px;
     background: var(--i);
     background-size: cover;
   }
@@ -41,11 +43,11 @@
     opacity: 0;
     transition: 0.5s;
     p {
-      font-size: 1em;
+      font-size: 15px;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       font-weight: bold;
       text-align: center;
-      width: 300px;
+      width: 250px;
       color: #000;
       text-shadow: #fff 5px 0 5px;
     }
@@ -55,38 +57,66 @@
   }
 }
 
-@media (max-width: 576px) {
+//mobile
+@media (min-width: 320px) and (max-width: 576px) {
   .ss {
     iframe {
-      width: 500px;
-      height: 600px;
+      width: 100vw;
+      height: 400px;
     }
   }
   .tarjeta_ss {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 15px;
+    justify-content: center;
+    grid-gap: 10px;
     .galeria {
-      width: 450px;
+      width: 95vw;
+      height: 300px;
     }
   }
 }
-
-@media (min-width: 576px) and (max-width: 991px) {
+//tablet
+@media (min-width: 577px) and (max-width: 767px) {
   .ss {
     iframe {
-      width: 800px;
-      height: 700px;
+      width: 100vw;
+      height: 400px;
     }
   }
   .tarjeta_ss {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 15px;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    grid-gap: 5px;
     .galeria {
-      width: 350px;
+      width: auto;
+      min-width: 90vw;
+      height: 300px;
     }
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .ss {
+    iframe {
+      width: 80vw;
+      height: 500px;
+    }
+  }
+  .tarjeta_ss {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    justify-content: center;
+    grid-gap: 10px;
+    .galeria {
+      width: 45vw;
+      height: 400px;
+    }
+  }
+}
+//escritorio
+@media (min-width: 1025px) {
+  .h2_ss {
+    font-size: 3em;
+  }
 }

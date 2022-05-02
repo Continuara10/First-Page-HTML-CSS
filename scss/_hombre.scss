@@ -3,16 +3,15 @@
   background-color: #fff;
   padding: 40px 0px;
   text-align: center;
-  -webkit-text-stroke: 2px #000;
-  color: transparent;
-  font-size: map-get($titulos, letras);
+  font-size: 2em;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .tarjeta_hombre {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: 30px 60px;
+  margin: 0px 30px;
+  margin-bottom: 10px;
   .galeria {
     margin: 3px;
     height: 600px;
@@ -30,12 +29,12 @@
     opacity: 0;
     transition: 0.5s;
     a {
-      font-size: map-get($titulos, a);
+      font-size: 20px;
       color: #fff;
       text-shadow: #000 6px 0 7px;
     }
     p {
-      font-size: map-get($titulos, p);
+      font-size: 20px;
       color: #fff;
       text-shadow: #000 6px 0 7px;
     }
@@ -45,21 +44,47 @@
   }
 }
 
-@media (max-width: 576px) {
+//mobile
+@media (min-width: 320px) and (max-width: 576px) {
   .tarjeta_hombre {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 15px;
     justify-content: center;
     .galeria {
-      width: 450px;
+      width: 100vw;
+      height: 300px;
     }
   }
 }
-@media (min-width: 576px) and (max-width: 991px) {
+//tablet
+@media (min-width: 577px) and (max-width: 900px) {
   .tarjeta_hombre {
-    margin: 30px 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    justify-content: center;
+    .galeria {
+      width: 47vw;
+      height: 300px;
+    }
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 901px) and (max-width: 1024px) {
+  .tarjeta_hombre {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    .galeria {
+      width: 32vw;
+      height: 300px;
+    }
+  }
+  .h2_hombre {
+    font-size: 3em;
+  }
+}
+//escritorio
+@media (min-width: 1025px) {
+  .h2_hombre {
+    font-size: 3em;
+  }
 }

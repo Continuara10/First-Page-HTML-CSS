@@ -1,25 +1,64 @@
-form {
-  margin: auto 600px;
-  div label {
-    color: #fff;
+@import url("https://fonts.googleapis.com/css2?family=Radio+Canada:wght@500&display=swap");
+
+.form {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  form {
+    padding: 1vw 3vw;
+    background-color: #e1e1e1;
+    border-radius: 5px;
+  }
+  h2 {
+    margin: 20px 0;
+    font-size: 2em;
+    font-family: "Radio Canada", sans-serif;
+    color: #000;
+  }
+  div {
+    margin: 5px 0px;
+  }
+  input,
+  textarea {
+    border-radius: 5px;
+    border-style: none;
+    padding: 10px 5px;
+    width: 400px;
+  }
+  .input {
+    background-color: #2a2a2a;
+    color: #e1e1e1;
+  }
+  .submit:hover {
+    background-color: #000;
+    color: #e1e1e1;
+  }
+  .submit {
+    margin: 15px 0;
   }
 }
 
-@media (max-width: 576px) {
-  form {
-    margin: 50px auto;
-    margin-bottom: 60px;
-    width: 400px;
-    height: auto;
+//mobile
+@media (min-width: 320px) and (max-width: 576px) {
+  .form {
+    input,
+    textarea {
+      width: 270px;
+    }
   }
 }
-@media (min-width: 576px) and (max-width: 991px) {
-  form {
-    margin: 50px auto;
-    margin-bottom: 60px;
-    width: 650px;
-    height: auto;
-  }
+@media (min-width: 400px) and (max-width: 480px) {
 }
-@media (min-width: 992px) {
+@media (min-width: 481px) and (max-width: 576px) {
+}
+//tablet
+@media (min-width: 577px) and (max-width: 767px) {
+}
+@media (min-width: 768px) and (max-width: 900px) {
+}
+@media (min-width: 901px) and (max-width: 1024px) {
+}
+//escritorio
+@media (min-width: 1025px) {
 }

@@ -38,23 +38,50 @@
   }
 }
 
-@media (max-width: 576px) {
+//mobile
+@media (min-width: 320px) and (max-width: 576px) {
   .tarjeta_mujer {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 15px;
     justify-content: center;
     .galeria {
-      width: 450px;
+      width: 95vw;
+      height: 300px;
+    }
+  }
+  .h2_mujer {
+    font-size: 35px;
+  }
+}
+//tablet
+@media (min-width: 577px) and (max-width: 900px) {
+  .tarjeta_mujer {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    justify-content: center;
+    .galeria {
+      width: 47vw;
+      height: 300px;
     }
   }
 }
-
-@media (min-width: 576px) and (max-width: 991px) {
+@media (min-width: 901px) and (max-width: 1024px) {
   .tarjeta_mujer {
-    margin: 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    .galeria {
+      width: 32vw;
+      height: 300px;
+    }
+  }
+  .h2_mujer {
+    font-size: 3em;
   }
 }
-
-@media (min-width: 992px) {
+//escritorio
+@media (min-width: 1025px) {
+  .h2_mujer {
+    font-size: 3em;
+  }
 }
