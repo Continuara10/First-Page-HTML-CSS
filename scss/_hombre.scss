@@ -25,22 +25,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: transparent;
-    opacity: 0;
-    transition: 0.5s;
     a {
       font-size: 20px;
-      color: #fff;
-      text-shadow: #000 6px 0 7px;
+      color: #e1e1e1;
+      background-color: rgba(42, 42, 42, 0.5);
+      padding: 10px 10px;
     }
-    p {
-      font-size: 20px;
-      color: #fff;
-      text-shadow: #000 6px 0 7px;
-    }
-  }
-  .galeria:hover .texto {
-    opacity: 1;
   }
 }
 
@@ -51,7 +41,7 @@
     grid-template-columns: repeat(1, 1fr);
     justify-content: center;
     .galeria {
-      width: 100vw;
+      width: 95vw;
       height: 300px;
     }
   }
@@ -84,6 +74,16 @@
 }
 //escritorio
 @media (min-width: 1025px) {
+  .tarjeta_hombre {
+    .texto {
+      background: transparent;
+      opacity: 0;
+      transition: 0.5s;
+    }
+    .galeria:hover .texto {
+      opacity: 1;
+    }
+  }
   .h2_hombre {
     font-size: 3em;
   }

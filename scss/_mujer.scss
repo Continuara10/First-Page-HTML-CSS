@@ -3,85 +3,17 @@
 }
 
 .tarjeta_mujer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 30px 60px;
-  .galeria {
-    margin: 3px;
-    height: 600px;
-    background: var(--i);
-    background-size: cover;
-  }
-  .texto {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    opacity: 0;
-    transition: 0.5s;
-    a {
-      font-size: 30px;
-      color: #fff;
-      text-shadow: #000 6px 0 7px;
-    }
-    p {
-      font-size: 15px;
-      color: #fff;
-      text-shadow: #000 6px 0 7px;
-    }
-  }
-  .galeria:hover .texto {
-    opacity: 1;
-  }
+  @extend .tarjeta_hombre;
 }
 
 //mobile
 @media (min-width: 320px) and (max-width: 576px) {
-  .tarjeta_mujer {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    justify-content: center;
-    .galeria {
-      width: 95vw;
-      height: 300px;
-    }
-  }
-  .h2_mujer {
-    font-size: 35px;
-  }
 }
 //tablet
 @media (min-width: 577px) and (max-width: 900px) {
-  .tarjeta_mujer {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    justify-content: center;
-    .galeria {
-      width: 47vw;
-      height: 300px;
-    }
-  }
 }
 @media (min-width: 901px) and (max-width: 1024px) {
-  .tarjeta_mujer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    .galeria {
-      width: 32vw;
-      height: 300px;
-    }
-  }
-  .h2_mujer {
-    font-size: 3em;
-  }
 }
 //escritorio
 @media (min-width: 1025px) {
-  .h2_mujer {
-    font-size: 3em;
-  }
 }

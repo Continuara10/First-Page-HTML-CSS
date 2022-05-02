@@ -87,19 +87,19 @@ footer {
     font-size: 15px;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
 
-.banner .carousel-caption {
-  padding: 100 0; }
-  .banner .carousel-caption h2 {
-    padding: 30px 0px;
-    background-color: #e1e1e1; }
-  .banner .carousel-caption a {
-    color: #2a2a2a;
-    font-size: 60px;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
-  .banner .carousel-caption p {
-    font-family: sans-serif;
-    color: #4e4a49;
-    font-size: 20px; }
+.banner .carousel-caption h2 {
+  padding: 30px 0px;
+  background-color: #e1e1e1; }
+
+.banner .carousel-caption a {
+  color: #2a2a2a;
+  font-size: 60px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
+
+.banner .carousel-caption p {
+  font-family: sans-serif;
+  color: #4e4a49;
+  font-size: 20px; }
 
 .banner img {
   height: 800px;
@@ -122,6 +122,7 @@ footer {
     align-items: center;
     justify-content: center; }
     .tarjeta_index .texto a {
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
       font-size: 20px;
       color: #fff;
       text-shadow: #000 6px 0 7px; }
@@ -238,71 +239,6 @@ footer {
     .tarjeta_index .galeria {
       height: 400px; } }
 
-.tarjeta_mujer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 30px 60px; }
-  .tarjeta_mujer .galeria {
-    margin: 3px;
-    height: 600px;
-    background: var(--i);
-    background-size: cover; }
-  .tarjeta_mujer .texto {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    opacity: 0;
-    transition: 0.5s; }
-    .tarjeta_mujer .texto a {
-      font-size: 30px;
-      color: #fff;
-      text-shadow: #000 6px 0 7px; }
-    .tarjeta_mujer .texto p {
-      font-size: 15px;
-      color: #fff;
-      text-shadow: #000 6px 0 7px; }
-  .tarjeta_mujer .galeria:hover .texto {
-    opacity: 1; }
-
-@media (min-width: 320px) and (max-width: 576px) {
-  .tarjeta_mujer {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    justify-content: center; }
-    .tarjeta_mujer .galeria {
-      width: 95vw;
-      height: 300px; }
-  .h2_mujer {
-    font-size: 35px; } }
-
-@media (min-width: 577px) and (max-width: 900px) {
-  .tarjeta_mujer {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    justify-content: center; }
-    .tarjeta_mujer .galeria {
-      width: 47vw;
-      height: 300px; } }
-
-@media (min-width: 901px) and (max-width: 1024px) {
-  .tarjeta_mujer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center; }
-    .tarjeta_mujer .galeria {
-      width: 32vw;
-      height: 300px; }
-  .h2_mujer {
-    font-size: 3em; } }
-
-@media (min-width: 1025px) {
-  .h2_mujer {
-    font-size: 3em; } }
-
 .h2_hombre, .h2_mujer {
   width: 100%;
   background-color: #fff;
@@ -311,67 +247,65 @@ footer {
   font-size: 2em;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
 
-.tarjeta_hombre {
+.tarjeta_hombre, .tarjeta_mujer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 0px 30px;
   margin-bottom: 10px; }
-  .tarjeta_hombre .galeria {
+  .tarjeta_hombre .galeria, .tarjeta_mujer .galeria {
     margin: 3px;
     height: 600px;
     background: var(--i);
     background-size: cover; }
-  .tarjeta_hombre .texto {
+  .tarjeta_hombre .texto, .tarjeta_mujer .texto {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background: transparent;
-    opacity: 0;
-    transition: 0.5s; }
-    .tarjeta_hombre .texto a {
+    justify-content: center; }
+    .tarjeta_hombre .texto a, .tarjeta_mujer .texto a {
       font-size: 20px;
-      color: #fff;
-      text-shadow: #000 6px 0 7px; }
-    .tarjeta_hombre .texto p {
-      font-size: 20px;
-      color: #fff;
-      text-shadow: #000 6px 0 7px; }
-  .tarjeta_hombre .galeria:hover .texto {
-    opacity: 1; }
+      color: #e1e1e1;
+      background-color: rgba(42, 42, 42, 0.5);
+      padding: 10px 10px; }
 
 @media (min-width: 320px) and (max-width: 576px) {
-  .tarjeta_hombre {
+  .tarjeta_hombre, .tarjeta_mujer {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     justify-content: center; }
-    .tarjeta_hombre .galeria {
-      width: 100vw;
+    .tarjeta_hombre .galeria, .tarjeta_mujer .galeria {
+      width: 95vw;
       height: 300px; } }
 
 @media (min-width: 577px) and (max-width: 900px) {
-  .tarjeta_hombre {
+  .tarjeta_hombre, .tarjeta_mujer {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     justify-content: center; }
-    .tarjeta_hombre .galeria {
+    .tarjeta_hombre .galeria, .tarjeta_mujer .galeria {
       width: 47vw;
       height: 300px; } }
 
 @media (min-width: 901px) and (max-width: 1024px) {
-  .tarjeta_hombre {
+  .tarjeta_hombre, .tarjeta_mujer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center; }
-    .tarjeta_hombre .galeria {
+    .tarjeta_hombre .galeria, .tarjeta_mujer .galeria {
       width: 32vw;
       height: 300px; }
   .h2_hombre, .h2_mujer {
     font-size: 3em; } }
 
 @media (min-width: 1025px) {
+  .tarjeta_hombre .texto, .tarjeta_mujer .texto {
+    background: transparent;
+    opacity: 0;
+    transition: 0.5s; }
+  .tarjeta_hombre .galeria:hover .texto, .tarjeta_mujer .galeria:hover .texto {
+    opacity: 1; }
   .h2_hombre, .h2_mujer {
     font-size: 3em; } }
 
@@ -389,83 +323,73 @@ footer {
   background-color: #fff;
   padding: 40px 0px;
   text-align: center;
-  -webkit-text-stroke: 2px #000;
-  color: transparent;
   font-size: 2em;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
 
 .tarjeta_ss {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin-bottom: 10px;
-  justify-items: center;
-  align-items: center; }
-  .tarjeta_ss .galeria {
-    width: 400px;
-    height: 650px;
-    background: var(--i);
-    background-size: cover; }
-  .tarjeta_ss .texto {
+  width: 100%;
+  display: flex;
+  max-width: 1400px;
+  margin: auto; }
+  .tarjeta_ss .cartas {
     width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    opacity: 0;
-    transition: 0.5s; }
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    transition: all 400ms ease-out;
+    cursor: default; }
+  .tarjeta_ss .cartas img {
+    width: 100%;
+    height: 440px; }
+  .tarjeta_ss .texto {
+    padding: 15px;
+    text-align: center; }
     .tarjeta_ss .texto p {
-      font-size: 15px;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      font-weight: bold;
-      text-align: center;
-      width: 250px;
-      color: #000;
-      text-shadow: #fff 5px 0 5px; }
-  .tarjeta_ss .galeria:hover .texto {
-    opacity: 1; }
+      line-height: 1.8;
+      color: #6a6a6a;
+      font-size: 14px;
+      margin-bottom: 5px; }
+    .tarjeta_ss .texto a {
+      display: inline-block;
+      padding: 10px;
+      margin-top: 10px;
+      color: #2a2a2a;
+      border: 1px solid #2a2a2a;
+      border-radius: 4px;
+      transition: all 400ms ease;
+      margin-bottom: 5px; }
+    .tarjeta_ss .texto a:hover {
+      background: #2a2a2a;
+      color: #fff; }
 
 @media (min-width: 320px) and (max-width: 576px) {
   .ss iframe {
     width: 100vw;
     height: 400px; }
   .tarjeta_ss {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    justify-content: center;
-    grid-gap: 10px; }
-    .tarjeta_ss .galeria {
-      width: 95vw;
-      height: 300px; } }
+    flex-wrap: wrap; }
+    .tarjeta_ss .cartas {
+      margin: 15px; } }
 
 @media (min-width: 577px) and (max-width: 767px) {
   .ss iframe {
     width: 100vw;
     height: 400px; }
   .tarjeta_ss {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    justify-content: center;
-    grid-gap: 5px; }
-    .tarjeta_ss .galeria {
-      width: auto;
-      min-width: 90vw;
-      height: 300px; } }
+    flex-wrap: wrap; }
+    .tarjeta_ss .cartas {
+      margin: 15px; }
+    .tarjeta_ss .cartas img {
+      height: 600px; } }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .ss iframe {
     width: 80vw;
-    height: 500px; }
-  .tarjeta_ss {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    justify-content: center;
-    grid-gap: 10px; }
-    .tarjeta_ss .galeria {
-      width: 45vw;
-      height: 400px; } }
+    height: 500px; } }
 
 @media (min-width: 1025px) {
+  .tarjeta_ss .cartas:hover {
+    transform: translateY(-3%); }
   .h2_ss {
     font-size: 3em; } }
