@@ -62,10 +62,10 @@ header .navbar {
   width: 100%; }
 
 header .collapse li a {
-  color: #fff;
+  color: #2a2a2a;
+  font-weight: bold;
   font-size: 20px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  text-shadow: #000 1px 0 5px; }
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
 
 header .navbar-brand {
   font-family: "Roboto Slab", serif;
@@ -95,11 +95,6 @@ footer {
   color: #2a2a2a;
   font-size: 60px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
-
-.banner .carousel-caption p {
-  font-family: sans-serif;
-  color: #4e4a49;
-  font-size: 20px; }
 
 .banner img {
   height: 800px;
